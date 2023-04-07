@@ -1,3 +1,5 @@
-const getRandomInRange = (from: number, to: number): number => Math.floor(Math.random() * (to - from) + from);
+const getRandomInRange = (from: number, to: number): number => {
+    return Math.floor(Math.random() * (to - from) + from);
+};
 
 export default getRandomInRange;

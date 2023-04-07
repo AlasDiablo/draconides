@@ -30,6 +30,7 @@
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
     "devDependencies": {
+        "jest": "^29.5.0",
         "typescript": "^5.0.3"
     },
     "publishConfig": {
