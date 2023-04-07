@@ -1,5 +1,5 @@
 {
-    "name": "math",
+    "name": "@draconides/math",
     "version": "0.0.1",
     "description": "Maths function",
     "keywords": [
@@ -29,5 +29,6 @@
     },
     "devDependencies": {
         "typescript": "^5.0.3"
-    }
+    },
+    "gitHead": "4ee33869f7711c75b0bd79a3d8f3ff82e04b15ad"
 }
