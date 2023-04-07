@@ -1,5 +1,6 @@
 {
     "name": "@draconides/math",
+    "private": false,
     "version": "0.0.1",
     "description": "Maths function",
     "keywords": [
@@ -22,7 +23,8 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/AlasDiablo/draconides.git"
+        "url": "git+https://github.com/AlasDiablo/draconides.git",
+        "directory": "packages/math"
     },
     "bugs": {
         "url": "https://github.com/AlasDiablo/draconides/issues"
@@ -30,5 +32,8 @@
     "devDependencies": {
         "typescript": "^5.0.3"
     },
-    "gitHead": "4ee33869f7711c75b0bd79a3d8f3ff82e04b15ad"
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "40a29309689c87185e6c2f72c4aa69bf69c8f0b1"
 }
