@@ -1,0 +1,29 @@
+{
+  "name": "math",
+  "version": "1.0.0",
+  "description": "Maths function",
+  "keywords": [
+    "Math"
+  ],
+  "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
+  "homepage": "https://github.com/AlasDiablo/draconides#readme",
+  "license": "CECILL-C",
+  "main": "lib/math.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlasDiablo/draconides.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/math.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/AlasDiablo/draconides/issues"
+  }
+}

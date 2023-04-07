@@ -1,6 +1,9 @@
 {
     "name": "root",
     "private": true,
+    "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
+    "homepage": "https://github.com/AlasDiablo/draconides#readme",
+    "license": "CECILL-C",
     "scripts": {
         "lerna:bootstrap": "lerna bootstrap",
         "lerna:version": "lerna version",
