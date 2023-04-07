@@ -1,0 +1,15 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "lerna:bootstrap": "lerna bootstrap",
+        "lerna:version": "lerna version",
+        "lerna:publish": "lerna publish from-package"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "lerna": "^6.6.1"
+    }
+}
