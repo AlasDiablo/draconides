@@ -1,5 +1,8 @@
 ############### Node ###############
 
+# build files
+packages/*/lib/**/*
+
 # Logs
 logs
 *.log
