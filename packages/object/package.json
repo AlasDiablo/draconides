@@ -1,0 +1,44 @@
+{
+    "name": "@draconides/object",
+    "private": false,
+    "version": "0.0.1-alpha.0",
+    "description": "Object manipulation function",
+    "keywords": [
+        "Object", "Manipulation"
+    ],
+    "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
+    "homepage": "https://github.com/AlasDiablo/draconides#readme",
+    "license": "CECILL-C",
+    "main": "./index.js",
+    "types": "./index.d.ts",
+    "scripts": {
+        "test": "jest",
+        "build": "tsc",
+        "prepublishOnly": "npm run build && cp -r ./lib/* . && rm -rf ./lib",
+        "postpublish": "git clean -fd"
+    },
+    "directories": {
+        "test": "__test__"
+    },
+    "files": [
+        "src",
+        "*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlasDiablo/draconides.git",
+        "directory": "packages/object"
+    },
+    "bugs": {
+        "url": "https://github.com/AlasDiablo/draconides/issues"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.0",
+        "jest": "^29.5.0",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

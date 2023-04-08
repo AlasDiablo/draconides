@@ -2,7 +2,12 @@
 
 Draconides (French word of [Draconids](https://en.wikipedia.org/wiki/Draconids)) is a monorepo library make by AlasDiablo to add useful function, utils and tools.
 
-## Available modules
+## Draconides Object
 
-- [Math](packages/math) add utility function related to math
-- [Object](packages/object) add utility function related to object manipulation
+This module of Draconides add object manipulation function such as set, get, etc.
+
+## Installation
+
+```bash
+npm install --save @draconides/object
+```
