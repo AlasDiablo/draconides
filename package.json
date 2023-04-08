@@ -7,7 +7,11 @@
     "scripts": {
         "lerna:bootstrap": "lerna bootstrap",
         "lerna:version": "lerna version",
-        "lerna:publish": "lerna publish from-package"
+        "lerna:publish": "lerna publish from-package",
+        "build": "lerna run build",
+        "test": "lerna run test",
+        "lint": "eslint \"packages/**/{src,__test__}/**/*.{tsx,ts}\" --fix",
+        "lint:test": "eslint \"packages/**/{src,__test__}/**/*.{tsx,ts}\""
     },
     "workspaces": [
         "packages/*"
