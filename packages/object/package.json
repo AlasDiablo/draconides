@@ -1,10 +1,11 @@
 {
     "name": "@draconides/object",
     "private": false,
-    "version": "0.0.1-alpha.0",
+    "version": "0.0.1",
     "description": "Object manipulation function",
     "keywords": [
-        "Object", "Manipulation"
+        "Object",
+        "Manipulation"
     ],
     "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
     "homepage": "https://github.com/AlasDiablo/draconides#readme",
