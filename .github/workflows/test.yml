@@ -27,7 +27,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    needs: [ 'check-code-eslint' ]
+    needs: [ 'eslint' ]
     strategy:
       matrix:
         node-version: [ 16.x, 18.x, 19.x ]
