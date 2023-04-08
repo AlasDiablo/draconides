@@ -1,9 +1,10 @@
-import get from './get';
-import set from './set';
+import getModule from './get';
+import setModule from './set';
 
-const defaultExport = {
+export const get = getModule;
+export const set = setModule;
+
+export default {
     get,
     set
-}
-
-export default defaultExport;
+};

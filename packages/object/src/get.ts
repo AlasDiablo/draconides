@@ -4,6 +4,6 @@ const get = <T>(object: any, path: string, defaultValue: T): T => {
         return value as T;
     }
     return defaultValue;
-}
+};
 
 export default get;

@@ -1,4 +1,4 @@
-import radian from '../src/radian';
+import { radian } from '../src';
 
 describe('Radian', () => {
     test('should return 2PI when given 360', () => {

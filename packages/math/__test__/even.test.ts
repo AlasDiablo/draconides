@@ -1,4 +1,4 @@
-import even from '../src/even';
+import { even } from '../src';
 
 describe('Even', () => {
     test('should return true when given 8, 2, 0 or 10', () => {

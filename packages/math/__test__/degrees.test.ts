@@ -1,4 +1,4 @@
-import degrees from '../src/degrees';
+import { degrees } from '../src';
 
 describe('Degrees', () => {
     test('should return 360 when given 2PI', () => {

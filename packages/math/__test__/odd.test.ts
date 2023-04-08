@@ -1,4 +1,4 @@
-import odd from '../src/odd';
+import { odd } from '../src';
 
 describe('Odd', () => {
     test('should return true when given 9, 3, 1 or 11', () => {
