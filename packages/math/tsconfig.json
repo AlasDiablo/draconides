@@ -8,6 +8,7 @@
             "es6",
             "dom"
         ],
+        "moduleResolution":"Node",
         "declaration": true,
         "outDir": "./lib",
         "strict": true,
