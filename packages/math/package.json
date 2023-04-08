@@ -20,14 +20,9 @@
     "directories": {
         "test": "__test__"
     },
-    "exports": {
-        ".": {
-            "import": "./index.js"
-        },
-        "./src/*": "./src/*"
-    },
     "files": [
-        "src"
+        "src",
+        "*"
     ],
     "repository": {
         "type": "git",
