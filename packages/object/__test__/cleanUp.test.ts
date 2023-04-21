@@ -1,4 +1,4 @@
-import {cleanUp} from '../src';
+import { cleanUp } from '../src';
 
 describe('cleanUp', () => {
     test('should remove any undefined and null value from 1st level of an object', () => {

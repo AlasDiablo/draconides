@@ -21,7 +21,6 @@
         "test": "__test__"
     },
     "files": [
-        "src",
         "*"
     ],
     "repository": {
