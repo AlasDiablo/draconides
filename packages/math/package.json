@@ -4,7 +4,8 @@
     "version": "0.0.5",
     "description": "Maths function",
     "keywords": [
-        "Math"
+        "Math",
+        "Draconides"
     ],
     "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
     "homepage": "https://github.com/AlasDiablo/draconides#readme",
@@ -32,13 +33,12 @@
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
     "devDependencies": {
-        "@types/jest": "^29.5.0",
+        "@types/jest": "^29.5.1",
         "jest": "^29.5.0",
         "ts-jest": "^29.1.0",
-        "typescript": "^5.0.3"
+        "typescript": "^5.0.4"
     },
     "publishConfig": {
         "access": "public"
-    },
-    "gitHead": "40a29309689c87185e6c2f72c4aa69bf69c8f0b1"
+    }
 }
