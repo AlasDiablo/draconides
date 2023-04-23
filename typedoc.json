@@ -1,0 +1,6 @@
+{
+    "entryPoints": ["packages/*"],
+    "name": "Draconides",
+    "entryPointStrategy": "packages",
+    "includeVersion": true
+}

@@ -5,7 +5,8 @@
     },
     "plugins": [
         "@typescript-eslint/eslint-plugin",
-        "eslint-plugin-import"
+        "eslint-plugin-import",
+        "eslint-plugin-tsdoc"
     ],
     "extends": [
         "eslint:recommended",
@@ -85,6 +86,7 @@
         ],
         "indent": ["error", 4],
         "quotes": ["error", "single"],
-        "semi": ["error", "always"]
+        "semi": ["error", "always"],
+        "tsdoc/syntax": "warn"
     }
 }

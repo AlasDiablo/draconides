@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es6",
+        "lib": [
+            "es2017",
+            "es7",
+            "es6",
+            "dom"
+        ],
+        "moduleResolution":"Node",
+        "declaration": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "composite": true,
+        "declarationMap": true
+    }
+}
