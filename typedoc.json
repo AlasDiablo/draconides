@@ -2,5 +2,7 @@
     "entryPoints": ["packages/*"],
     "name": "Draconides",
     "entryPointStrategy": "packages",
-    "includeVersion": true
+    "includeVersion": true,
+    "jsDocCompatibility": true,
+    "categorizeByGroup": true
 }
