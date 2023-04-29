@@ -9,5 +9,5 @@ Draconides (French word of [Draconids](https://en.wikipedia.org/wiki/Draconids))
 
 ## Available modules
 
-- [Math](packages/math) add utility function related to math
-- [Object](packages/object) add utility function related to object manipulation
+- [Math](https://www.npmjs.com/package/@draconides/math) add utility function related to math
+- [Object](https://www.npmjs.com/package/@draconides/object) add utility function related to object manipulation
