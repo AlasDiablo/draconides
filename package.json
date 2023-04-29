@@ -20,14 +20,14 @@
     "devDependencies": {
         "@microsoft/tsdoc": "^0.14.2",
         "@microsoft/tsdoc-config": "^0.16.2",
-        "@typescript-eslint/eslint-plugin": "^5.59.0",
-        "@typescript-eslint/parser": "^5.59.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.1",
+        "@typescript-eslint/parser": "^5.59.1",
         "eslint": "^8.39.0",
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jsdoc": "^43.1.1",
         "eslint-plugin-tsdoc": "^0.2.17",
         "lerna": "^6.6.1",
-        "typedoc": "^0.24.5",
+        "typedoc": "^0.24.6",
         "typescript": "^5.0.4"
     }
 }
