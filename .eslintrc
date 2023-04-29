@@ -11,7 +11,8 @@
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "@draconides/eslint-config-base"
     ],
     "env": {
         "node": true,
@@ -29,65 +30,6 @@
                 "ignoreRestSiblings": true
             }
         ],
-        "no-console": "error",
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "no-unused-vars": [
-            "error",
-            {
-                "vars": "all",
-                "args": "after-used",
-                "ignoreRestSiblings": false
-            }
-        ],
-        "no-import-assign": "error",
-        "no-undef": [
-            "error",
-            {
-                "typeof": true
-            }
-        ],
-        "no-unexpected-multiline": "error",
-        "no-self-assign": "error",
-        "no-unreachable": "error",
-        "no-unreachable-loop": "error",
-        "no-unsafe-optional-chaining": "error",
-        "no-use-before-define": "error",
-        "no-useless-backreference": "error",
-        "valid-typeof": [
-            "error",
-            {
-                "requireStringLiterals": false
-            }
-        ],
-        "camelcase": "error",
-        "curly": "error",
-        "eqeqeq": "error",
-        "no-shadow": "error",
-        "no-var": "error",
-        "radix": "error",
-        "import/first": "error",
-        "import/newline-after-import": "error",
-        "import/order": [
-            "error",
-            {
-                "groups": [
-                    "index",
-                    "sibling",
-                    "parent",
-                    "internal",
-                    "external",
-                    "builtin",
-                    "object",
-                    "type"
-                ]
-            }
-        ],
-        "indent": ["error", 4],
-        "quotes": ["error", "single"],
-        "semi": ["error", "always"],
         "tsdoc/syntax": "warn",
         "jsdoc/check-alignment": 1, // Recommended
         "jsdoc/check-param-names": 1, // Recommended
@@ -112,6 +54,6 @@
         "jsdoc/require-yields": 1, // Recommended
         "jsdoc/require-yields-check": 1, // Recommended
         "jsdoc/sort-tags": 1,
-        "jsdoc/tag-lines": 1, // Recommended
+        "jsdoc/tag-lines": 1 // Recommended
     }
 }
