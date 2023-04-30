@@ -1,0 +1,5 @@
+node_modules/**/*
+__test__/**/*
+tsconfig.json
+jest.config.js
+.npmignore

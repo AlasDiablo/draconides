@@ -1,0 +1,42 @@
+{
+    "name": "@draconides/youtube-iframe",
+    "private": false,
+    "version": "0.0.6",
+    "description": "YouTube API iFrame Wrapper",
+    "keywords": [
+        "YouTube",
+        "API iFrame",
+        "iFrame",
+        "Wrapper"
+    ],
+    "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
+    "homepage": "https://github.com/AlasDiablo/draconides#readme",
+    "license": "CECILL-C",
+    "main": "./index.js",
+    "types": "./index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build && cp -r ./lib/* . && rm -rf ./lib",
+        "postpublish": "git clean -fd"
+    },
+    "directories": {
+        "test": "__test__"
+    },
+    "files": [
+        "*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlasDiablo/draconides.git",
+        "directory": "packages/youtube-iframe"
+    },
+    "bugs": {
+        "url": "https://github.com/AlasDiablo/draconides/issues"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
