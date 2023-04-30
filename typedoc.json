@@ -1,5 +1,6 @@
 {
     "entryPoints": ["packages/*"],
+    "exclude": ["packages/eslint-*"],
     "name": "Draconides",
     "entryPointStrategy": "packages",
     "includeVersion": true,
