@@ -5,7 +5,7 @@ describe('Set', () => {
         const obj = {};
         expect(set<boolean>(obj, 'value', true)).toStrictEqual(undefined);
         expect(obj).toStrictEqual({
-            value: true
+            value: true,
         });
     });
 
@@ -15,7 +15,7 @@ describe('Set', () => {
         };
         expect(set<number>(obj, 'value', 200)).toStrictEqual(100);
         expect(obj).toStrictEqual({
-            value: 200
+            value: 200,
         });
     });
 });

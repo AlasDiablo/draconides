@@ -6,6 +6,6 @@ describe('Get', () => {
     });
 
     test('should return the correct value', () => {
-        expect(get<string>({value: 'valid value'}, 'value', 'not valid value')).toStrictEqual('valid value');
+        expect(get<string>({ value: 'valid value' }, 'value', 'not valid value')).toStrictEqual('valid value');
     });
 });

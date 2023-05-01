@@ -9,7 +9,7 @@ describe('cleanUp', () => {
             nop: undefined,
             obj: {
                 recursive: undefined,
-            }
+            },
         };
         cleanUp(value);
         expect(value).toStrictEqual({
@@ -17,7 +17,7 @@ describe('cleanUp', () => {
             other: 'An other value',
             obj: {
                 recursive: undefined,
-            }
+            },
         });
     });
 });

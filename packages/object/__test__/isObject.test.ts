@@ -10,9 +10,11 @@ describe('isObject', () => {
     });
 
     test('should return false when a function is given', () => {
-        expect(isObject(() => {
-            return {};
-        })).toBeFalsy();
+        expect(
+            isObject(() => {
+                return {};
+            }),
+        ).toBeFalsy();
     });
 
     test('should return false when a null is given', () => {
@@ -24,9 +26,11 @@ describe('isObject', () => {
     });
 
     test('should return true when a object is given', () => {
-        expect(isObject({
-            value: 'A value',
-            other: 'An other value'
-        })).toBeTruthy();
+        expect(
+            isObject({
+                value: 'A value',
+                other: 'An other value',
+            }),
+        ).toBeTruthy();
     });
 });
