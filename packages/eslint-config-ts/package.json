@@ -1,12 +1,13 @@
 {
-    "name": "@draconides/eslint-config-base",
+    "name": "@draconides/eslint-config-ts",
     "private": false,
     "version": "0.0.1",
-    "description": "Draconides Eslint Config",
+    "description": "Draconides Eslint Config for TypeScript",
     "keywords": [
         "ESLint Config",
         "Draconides",
-        "ESLint ES6"
+        "ESLint ES6",
+        "TypeScript"
     ],
     "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
     "homepage": "https://github.com/AlasDiablo/draconides#readme",
@@ -18,19 +19,18 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/AlasDiablo/draconides.git",
-        "directory": "packages/eslint-config-base"
+        "directory": "packages/eslint-config-ts"
     },
     "bugs": {
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
     "dependencies": {
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-prettier": "^4.2.1"
+        "@typescript-eslint/eslint-plugin": "^5.59.1",
+        "@typescript-eslint/parser": "^5.59.1",
+        "@draconides/eslint-config-base": "*"
     },
     "peerDependencies": {
-        "eslint": "^8.39.0",
-        "prettier": "^2.8.8"
+        "eslint": "^8.39.0"
     },
     "publishConfig": {
         "access": "public"

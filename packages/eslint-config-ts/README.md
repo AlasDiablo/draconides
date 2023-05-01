@@ -10,10 +10,10 @@ Draconides (French word of [Draconids](https://en.wikipedia.org/wiki/Draconids))
 
 ## Draconides eslint-config-base
 
-This module of Draconides is a configuration for ESLint
+This module of Draconides is a configuration for ESLint with TypeScript
 
 ## Installation
 
 ```bash
-npm install --save-dev @draconides/eslint-config-base
+npm install --save-dev @draconides/eslint-config-ts
 ```

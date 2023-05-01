@@ -1,15 +1,15 @@
 import type { YT } from './types';
 
-type WindowWithYT = {
+type WindowWithYT = typeof Window & {
     YT: YT;
     onYouTubeIframeAPIReady: () => void;
-} & typeof Window;
+};
 
 type State = {
     loading: boolean;
     loaded: boolean;
-    callback: ((value: any) => void)[]
-}
+    callback: Array<(value: YT) => void>;
+};
 
 const state: State = {
     loading: false,
@@ -27,7 +27,7 @@ const state: State = {
 export const YouTubeIFrameAPI = (): Promise<YT> => {
     return new Promise<YT>((resolve) => {
         if (state.loaded) {
-            resolve((window as any as WindowWithYT).YT);
+            resolve((window as unknown as WindowWithYT).YT);
         }
         if (state.loading) {
             state.callback.push(resolve);
@@ -36,23 +36,26 @@ export const YouTubeIFrameAPI = (): Promise<YT> => {
             state.loading = true;
             state.callback.push(resolve);
 
-            (window as any as WindowWithYT).onYouTubeIframeAPIReady = () => {
+            (window as unknown as WindowWithYT).onYouTubeIframeAPIReady = () => {
                 state.loaded = true;
                 state.loading = false;
                 while (state.callback.length > 0) {
                     const callback = state.callback.pop();
                     if (callback !== undefined) {
-                        callback((window as any as WindowWithYT).YT);
+                        callback((window as unknown as WindowWithYT).YT);
                     }
                 }
             };
-            if (typeof ((window as any as WindowWithYT).YT) === 'undefined' || typeof (((window as any as WindowWithYT).YT).Player) === 'undefined') {
+            if (
+                typeof (window as unknown as WindowWithYT).YT === 'undefined' ||
+                typeof (window as unknown as WindowWithYT).YT.Player === 'undefined'
+            ) {
                 const script = document.createElement('script');
                 script.type = 'text/javascript';
                 script.src = 'https://www.youtube.com/iframe_api';
                 document.head.appendChild(script);
             } else {
-                (window as any as WindowWithYT).onYouTubeIframeAPIReady();
+                (window as unknown as WindowWithYT).onYouTubeIframeAPIReady();
             }
         }
     });

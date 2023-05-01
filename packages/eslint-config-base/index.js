@@ -1,27 +1,35 @@
 module.exports = {
-    plugins: [
-        'eslint-plugin-import',
-    ],
+    plugins: ['eslint-plugin-import'],
+    extends: ['plugin:prettier/recommended'],
     rules: {
-        'no-console': 'warn',
-        'linebreak-style': [
+        'prettier/prettier': [
             'error',
-            'unix'
+            {
+                singleQuote: true,
+                trailingComma: 'all',
+                tabWidth: 4,
+                bracketSpacing: true,
+                arrowParens: 'always',
+                endOfLine: 'lf',
+                semi: true,
+            },
         ],
+        'no-console': 'warn',
+        'linebreak-style': ['error', 'unix'],
         'no-unused-vars': [
             'error',
             {
-                'vars': 'all',
-                'args': 'after-used',
-                'ignoreRestSiblings': false
-            }
+                vars: 'all',
+                args: 'after-used',
+                ignoreRestSiblings: false,
+            },
         ],
         'no-import-assign': 'error',
         'no-undef': [
             'error',
             {
-                'typeof': true
-            }
+                typeof: true,
+            },
         ],
         'no-unexpected-multiline': 'error',
         'no-self-assign': 'error',
@@ -33,15 +41,15 @@ module.exports = {
         'valid-typeof': [
             'error',
             {
-                'requireStringLiterals': false
-            }
+                requireStringLiterals: false,
+            },
         ],
-        'camelcase': 'error',
-        'curly': 'error',
-        'eqeqeq': 'error',
+        camelcase: 'error',
+        curly: 'error',
+        eqeqeq: 'error',
         'no-shadow': 'error',
         'no-var': 'error',
-        'radix': 'error',
+        radix: 'error',
         'import/first': 'error',
         'import/newline-after-import': 'error',
         'import/no-namespace': 'error',
@@ -51,25 +59,16 @@ module.exports = {
         'import/order': [
             'error',
             {
-                'groups': [
-                    'index',
-                    'sibling',
-                    'parent',
-                    'internal',
-                    'external',
-                    'builtin',
-                    'object',
-                    'type'
-                ],
-                'alphabetize': {
-                    'order': 'asc',
-                    'caseInsensitive': true
+                groups: ['index', 'sibling', 'parent', 'internal', 'external', 'builtin', 'object', 'type'],
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: true,
                 },
-                'newlines-between': 'never'
-            }
+                'newlines-between': 'never',
+            },
         ],
-        'indent': ['error', 4],
-        'quotes': ['error', 'single'],
-        'semi': ['error', 'always'],
-    }
+        indent: ['error', 4],
+        quotes: ['error', 'single'],
+        semi: ['error', 'always'],
+    },
 };

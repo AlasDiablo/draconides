@@ -20,10 +20,10 @@
  * @version 0.0.4
  * @since 0.0.1
  */
-const get = <T>(object: any, path: string, defaultValue?: T ): T | undefined => {
+const get = <T>(object: any, path: string, defaultValue?: T): T | undefined => {
     const value: T | undefined = object[path];
     if (value) {
-        return value as T;
+        return value;
     }
     return defaultValue;
 };

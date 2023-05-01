@@ -1,11 +1,4 @@
-export type PlaybackQuality =
-    | 'highres'
-    | 'hd1080'
-    | 'hd720'
-    | 'large'
-    | 'medium'
-    | 'small'
-    | 'default';
+export type PlaybackQuality = 'default' | 'hd720' | 'hd1080' | 'highres' | 'large' | 'medium' | 'small';
 
 export type PlayerStateValue = -1 | 0 | 1 | 2 | 3 | 5;
 
@@ -17,31 +10,39 @@ export type PlayerState = {
     CUED: 5;
 };
 
-export type PlaybackRate = 0.25 | 0.5 | 1 | 1.5 | 2;
+export type PlaybackRate = 0.5 | 0.25 | 1 | 1.5 | 2;
 
 type loadVideoById =
-    | ((videoId: string, startSeconds?: number, endSeconds?: number, suggestedQuality?: PlaybackQuality) => void)
-    | ((options: { videoId: string, startSeconds: number, endSeconds?: number, suggestedQuality?: PlaybackQuality }) => void);
+    | ((options: {
+          videoId: string;
+          startSeconds: number;
+          endSeconds?: number;
+          suggestedQuality?: PlaybackQuality;
+      }) => void)
+    | ((videoId: string, startSeconds?: number, endSeconds?: number, suggestedQuality?: PlaybackQuality) => void);
 
 type cueVideoByUrl =
     | ((mediaContentUrl: string, startSeconds?: number, endSeconds?: number, suggestedQuality?: string) => void)
-    | ((options: { mediaContentUrl: string, startSeconds: number, endSeconds?: number, suggestedQuality?: PlaybackQuality }) => void);
+    | ((options: {
+          mediaContentUrl: string;
+          startSeconds: number;
+          endSeconds?: number;
+          suggestedQuality?: PlaybackQuality;
+      }) => void);
 
 type loadVideoByUrl = cueVideoByUrl;
 
-type placeHolderFunction = (...args : any[]) => void;
+type placeHolderFunction = (...args: unknown[]) => void;
 
 type voidFunction = () => void;
 
-// https://developers.google.com/youtube/iframe_api_reference?hl=fr#Functions
+// https://developers.google.com/youtube/iframe_api_reference?hl=fr
 export type Player = {
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Queueing_Functions
     loadVideoById: loadVideoById;
     cueVideoByUrl: cueVideoByUrl;
     loadVideoByUrl: loadVideoByUrl;
-    cuePlaylist: placeHolderFunction;
-    loadPlaylist: placeHolderFunction;
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Playback_controls
+    cuePlaylist: placeHolderFunction; // Todo: add type of this function
+    loadPlaylist: placeHolderFunction; // Todo: add type of this function
     playVideo: voidFunction;
     pauseVideo: voidFunction;
     stopVideo: voidFunction;
@@ -55,48 +56,39 @@ export type Player = {
     isMuted: () => boolean;
     setVolume: (volume: number) => void;
     getVolume: () => number;
-    setSize: (width: number, height: number) => any;
+    setSize: (width: number, height: number) => unknown;
     getPlaybackRate: () => PlaybackRate;
     setPlaybackRate: (suggestedRate: number) => void;
     getAvailablePlaybackRates: () => number[];
     setLoop: (loopPlaylists: boolean) => void;
     setShuffle: (shufflePlaylist: boolean) => void;
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Playback_status
     getVideoLoadedFraction: () => number;
     getPlayerState: () => PlayerStateValue;
     getCurrentTime: () => number;
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Playback_quality
     getPlaybackQuality: () => PlaybackQuality | undefined;
     setPlaybackQuality: (suggestedQuality: PlaybackQuality) => void;
     getAvailableQualityLevels: () => string[];
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Retrieving_video_information
     getDuration: () => number;
     getVideoUrl: () => string;
     getVideoEmbedCode: () => string;
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Retrieving_playlist_information
     getPlaylist: () => string[];
     getPlaylistIndex: () => number;
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Adding_event_listener
     addEventListener: (event: string, listener: string) => void;
     removeEventListener: (event: string, listener: string) => void;
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Accessing_and_Modifying_DOM_Nodes
     getIframe: () => HTMLIFrameElement;
     destroy: () => void;
-    // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Events
-
 };
 
 export type Event = {
     target: Player;
-}
+};
 
 // https://developers.google.com/youtube/iframe_api_reference?hl=fr#Loading_a_Video_Player
 export type PlayerOptions = {
-    host: 'https://www.youtube.com' | 'https://www.youtube-nocookie.com';
+    host: 'https://www.youtube-nocookie.com' | 'https://www.youtube.com';
     height: number | `${number}`;
     width: number | `${number}`;
     videoId: string;
-    // https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5&hl=fr
     playerVars?: {
         autoplay?: 0 | 1;
         cc_load_policy?: 1;
@@ -125,7 +117,7 @@ export type PlayerOptions = {
         onPlaybackQualityChange?: (event: Event & { data: PlaybackQuality }) => void;
         onPlaybackRateChange?: (event: Event & { data: PlaybackRate }) => void;
         onError?: (event: Event & { data: 2 | 5 | 100 | 101 | 150 }) => void;
-        onApiChange?: (event: Event & { data: any }) => void;
+        onApiChange?: (event: Event & { data: unknown }) => void;
     };
 };
 
