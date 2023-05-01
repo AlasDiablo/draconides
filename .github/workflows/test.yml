@@ -12,7 +12,9 @@ jobs:
     timeout-minutes: 10
     strategy:
       matrix:
-        node-version: [ 16.x, 18.x, 19.x ]
+        # Support only LTS and Current build of node
+        # See https://github.com/nodejs/Release
+        node-version: [ 16.x, 18.x, 20.x ]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -30,7 +32,7 @@ jobs:
     needs: [ 'eslint' ]
     strategy:
       matrix:
-        node-version: [ 16.x, 18.x, 19.x ]
+        node-version: [ 16.x, 18.x, 20.x ]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -48,7 +50,7 @@ jobs:
     needs: [ 'test' ]
     strategy:
       matrix:
-        node-version: [ 16.x, 18.x, 19.x ]
+        node-version: [ 16.x, 18.x, 20.x ]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
