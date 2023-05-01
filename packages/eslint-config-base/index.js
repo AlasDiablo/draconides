@@ -67,8 +67,5 @@ module.exports = {
                 'newlines-between': 'never',
             },
         ],
-        indent: ['error', 4],
-        quotes: ['error', 'single'],
-        semi: ['error', 'always'],
     },
 };
