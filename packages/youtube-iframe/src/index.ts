@@ -1,24 +1,4 @@
-// https://developers.google.com/youtube/iframe_api_reference?hl=fr#Loading_a_Video_Player
-export type PlayerOptions = {
-    height: `${number}`;
-    width: `${number}`;
-    videoId: string;
-    // https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5&hl=fr
-    playerVars: any;
-    events: {
-        onReady: (event: any) => void;
-        onStateChange: (event: any) => void;
-    }
-};
-
-export type PlayerState = {
-    PLAYING: boolean;
-};
-
-export type YT = {
-    Player: (elementId: string, options: PlayerOptions) => void;
-    PlayerState: PlayerState;
-};
+import type { YT } from './types';
 
 type WindowWithYT = {
     YT: YT;
@@ -37,33 +17,43 @@ const state: State = {
     callback: [],
 };
 
+/**
+ * Get a typed YouTube api object.
+ * This function will add YouTube iframe api into the dom if not present
+ * @returns - Return a Promise of YT
+ * @version 1.0.0
+ * @since 1.0.0
+ */
 export const YouTubeIFrameAPI = (): Promise<YT> => {
     return new Promise<YT>((resolve) => {
-        const localWindow: WindowWithYT = window as any;
         if (state.loaded) {
-            resolve(localWindow.YT);
+            resolve((window as any as WindowWithYT).YT);
         }
         if (state.loading) {
             state.callback.push(resolve);
         }
         if (!state.loaded && !state.loading) {
             state.loading = true;
+            state.callback.push(resolve);
 
-            localWindow.onYouTubeIframeAPIReady = () => {
+            (window as any as WindowWithYT).onYouTubeIframeAPIReady = () => {
                 state.loaded = true;
                 state.loading = false;
                 while (state.callback.length > 0) {
                     const callback = state.callback.pop();
                     if (callback !== undefined) {
-                        callback(localWindow.YT);
+                        callback((window as any as WindowWithYT).YT);
                     }
                 }
             };
-
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://www.youtube.com/iframe_api';
-            document.body.appendChild(script);
+            if (typeof ((window as any as WindowWithYT).YT) === 'undefined' || typeof (((window as any as WindowWithYT).YT).Player) === 'undefined') {
+                const script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://www.youtube.com/iframe_api';
+                document.head.appendChild(script);
+            } else {
+                (window as any as WindowWithYT).onYouTubeIframeAPIReady();
+            }
         }
     });
 };

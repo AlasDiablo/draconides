@@ -20,7 +20,8 @@
         "postpublish": "git clean -fd"
     },
     "directories": {
-        "test": "__test__"
+        "test": "__test__",
+        "example": "example"
     },
     "files": [
         "*"
