@@ -30,8 +30,6 @@
         "eslint-plugin-react-hooks": "^4.6.0"
     },
     "peerDependencies": {
-        "@draconides/eslint-config-base": "*",
-        "@draconides/eslint-config-ts": "*",
         "eslint": "^8.39.0",
         "prettier": "^2.8.8"
     },
