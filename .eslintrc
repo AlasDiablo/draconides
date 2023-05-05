@@ -1,18 +1,10 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "sourceType": "module",
-        "project": "./tsconfig.eslint.json"
-    },
     "plugins": [
-        "@typescript-eslint/eslint-plugin",
         "eslint-plugin-import",
-        "eslint-plugin-tsdoc",
         "eslint-plugin-jsdoc"
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
         "@draconides/eslint-config-base"
     ],
     "env": {
@@ -21,7 +13,6 @@
         "browser": true
     },
     "rules": {
-        "tsdoc/syntax": "warn",
         "jsdoc/check-alignment": 1, // Recommended
         "jsdoc/check-param-names": 1, // Recommended
         "jsdoc/check-property-names": 1, // Recommended
@@ -49,10 +40,22 @@
     },
     "overrides": [{
         "files": ["*.ts", "*.tsx"],
+        "parser": "@typescript-eslint/parser",
+        "parserOptions": {
+            "sourceType": "module",
+            "project": "./tsconfig.eslint.json"
+        },
+        "plugins": [
+            "@typescript-eslint/eslint-plugin",
+            "eslint-plugin-tsdoc"
+        ],
         "extends": [
             "eslint:recommended",
             "plugin:@typescript-eslint/recommended",
             "@draconides/eslint-config-ts"
-        ]
+        ],
+        "rules": {
+            "tsdoc/syntax": "warn"
+        }
     }]
 }
