@@ -5,7 +5,9 @@
 
 # Draconides
 
-Draconides (French word of [Draconids](https://en.wikipedia.org/wiki/Draconids)) is a monorepo library make by AlasDiablo to add useful function, utils and tools.
+Draconides (French word of [Draconids](https://en.wikipedia.org/wiki/Draconids))
+is a monorepo library made by AlasDiablo to add useful function,
+utils, and tools.
 
 ## Available modules
 
