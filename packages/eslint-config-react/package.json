@@ -1,7 +1,7 @@
 {
     "name": "@draconides/eslint-config-react",
     "private": false,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Draconides Eslint Config for React",
     "keywords": [
         "ESLint Config",
