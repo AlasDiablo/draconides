@@ -10,7 +10,7 @@ module.exports = {
         'react/destructuring-assignment': ['error', 'always'],
         'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
         'react/hook-use-state': ['error', { allowDestructuredState: true }],
-        'react/jsx-boolean-value': ['error', 'always'],
+        'react/jsx-boolean-value': ['error', 'never'],
         'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
         'react/jsx-closing-tag-location': 'error',
         'react/jsx-equals-spacing': ['error', 'never'],
@@ -27,12 +27,5 @@ module.exports = {
         'react/jsx-no-useless-fragment': 'error',
         'react/no-array-index-key': 'error',
         'react/no-deprecated': 'error',
-        // Material UI import rule
-        'no-restricted-imports': [
-            'error',
-            {
-                patterns: ['@mui/*', '@mui/*/*/*'],
-            },
-        ],
     },
 };
