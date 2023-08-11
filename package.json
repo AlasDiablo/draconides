@@ -5,7 +5,6 @@
     "homepage": "https://github.com/AlasDiablo/draconides#readme",
     "license": "CECILL-C",
     "scripts": {
-        "lerna:bootstrap": "lerna bootstrap",
         "lerna:version": "lerna version",
         "lerna:publish": "lerna publish from-package",
         "build": "lerna run build",

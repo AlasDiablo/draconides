@@ -23,14 +23,12 @@
     "bugs": {
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
-    "dependencies": {
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-prettier": "^5.0.0"
-    },
     "peerDependencies": {
-        "eslint": "^8.44.0",
-        "prettier": "^3.0.0"
+        "eslint": "^8.0.0",
+        "prettier": "^3.0.0",
+        "eslint-config-prettier": "^8.0.0",
+        "eslint-plugin-import": "^2.0.0",
+        "eslint-plugin-prettier": "^5.0.0"
     },
     "publishConfig": {
         "access": "public"
