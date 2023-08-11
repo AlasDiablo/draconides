@@ -1,7 +1,7 @@
 {
     "name": "@draconides/eslint-config-ts",
     "private": false,
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "Draconides Eslint Config for TypeScript",
     "keywords": [
         "ESLint Config",
@@ -25,10 +25,10 @@
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
     "peerDependencies": {
-        "eslint": "^8.0.0",
         "@draconides/eslint-config-base": "^1.0.0",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
-        "@typescript-eslint/parser": "^6.0.0"
+        "@typescript-eslint/parser": "^6.0.0",
+        "eslint": "^8.0.0"
     },
     "publishConfig": {
         "access": "public"
