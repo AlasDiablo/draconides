@@ -24,6 +24,11 @@
     "bugs": {
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
+    "dependencies": {
+        "eslint-plugin-jsx-a11y": "^6.0.0",
+        "eslint-plugin-react": "^7.0.0",
+        "eslint-plugin-react-hooks": "^4.0.0"
+    },
     "peerDependencies": {
         "eslint": "^8.0.0",
         "eslint-plugin-jsx-a11y": "^6.0.0",
