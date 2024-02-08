@@ -16,7 +16,7 @@
         "test": "jest",
         "build": "tsc",
         "prepublishOnly": "npm run build && cp -r ./lib/* . && rm -rf ./lib",
-        "postpublish": "git clean -fd"
+        "postpublish": "git clean -fd && rm tsconfig.tsbuildinfo"
     },
     "directories": {
         "test": "__test__"
