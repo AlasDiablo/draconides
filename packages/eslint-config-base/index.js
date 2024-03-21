@@ -64,7 +64,13 @@ module.exports = {
                     order: 'asc',
                     caseInsensitive: true,
                 },
-                'newlines-between': 'never',
+                'newlines-between': 'always',
+                pathGroups: [
+                    {
+                        pattern: '~/**',
+                        group: 'internal',
+                    },
+                ],
             },
         ],
     },
