@@ -1,7 +1,7 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint/eslint-plugin'],
-    extends: ['plugin:@typescript-eslint/recommended', '@draconides/eslint-config-base'],
+    plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-import'],
+    extends: ['plugin:@typescript-eslint/recommended', '@draconides/eslint-config-base', ''],
     rules: {
         '@typescript-eslint/array-type': [
             'error',
@@ -57,5 +57,15 @@ module.exports = {
                 ignoreRestSiblings: true,
             },
         ],
+    },
+    settings: {
+        'import/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
+        'import/resolver': {
+            typescript: {
+                alwaysTryTypes: true,
+            },
+        },
     },
 };

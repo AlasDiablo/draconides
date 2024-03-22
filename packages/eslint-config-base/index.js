@@ -1,6 +1,6 @@
 module.exports = {
     plugins: ['eslint-plugin-import'],
-    extends: ['plugin:prettier/recommended'],
+    extends: ['plugin:prettier/recommended', 'eslint:recommended', 'plugin:import/recommended'],
     rules: {
         'prettier/prettier': [
             'error',
@@ -65,12 +65,6 @@ module.exports = {
                     caseInsensitive: true,
                 },
                 'newlines-between': 'always',
-                pathGroups: [
-                    {
-                        pattern: '~/**',
-                        group: 'internal',
-                    },
-                ],
             },
         ],
     },
