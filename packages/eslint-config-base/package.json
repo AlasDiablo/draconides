@@ -1,7 +1,7 @@
 {
     "name": "@draconides/eslint-config-base",
     "private": false,
-    "version": "1.3.0",
+    "version": "1.4.0",
     "description": "Draconides Eslint Config",
     "keywords": [
         "ESLint Config",
