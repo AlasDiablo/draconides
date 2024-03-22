@@ -1,6 +1,6 @@
 module.exports = {
     plugins: ['eslint-plugin-import'],
-    extends: ['plugin:prettier/recommended', 'eslint:recommended', 'plugin:import/recommended'],
+    extends: ['plugin:prettier/recommended', 'eslint:recommended'],
     rules: {
         'prettier/prettier': [
             'error',
