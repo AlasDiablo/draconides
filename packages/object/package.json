@@ -10,19 +10,19 @@
     "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
     "homepage": "https://github.com/AlasDiablo/draconides#readme",
     "license": "CECILL-C",
-    "main": "./index.js",
-    "types": "./index.d.ts",
+    "main": "./bin/index.js",
+    "types": "./bin/index.d.ts",
     "scripts": {
         "test": "jest",
         "build": "tsc",
-        "prepublishOnly": "npm run build && cp -r ./lib/* . && rm -rf ./lib",
+        "prepublishOnly": "npm run build",
         "postpublish": "git clean -fd && rm tsconfig.tsbuildinfo"
     },
     "directories": {
         "test": "__test__"
     },
     "files": [
-        "*"
+        "./bin"
     ],
     "repository": {
         "type": "git",
