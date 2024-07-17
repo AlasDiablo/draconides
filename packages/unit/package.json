@@ -10,8 +10,8 @@
     "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
     "homepage": "https://github.com/AlasDiablo/draconides#readme",
     "license": "CECILL-C",
-    "main": "./bin/index.js",
-    "types": "./bin/index.d.ts",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
     "scripts": {
         "test": "jest",
         "build": "tsc",

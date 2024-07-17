@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import { computing } from '@draconides/unit';
+import Unit from '@draconides/unit';
 
 type FormatBytesOptions = {
     decimals?: number;
@@ -14,22 +12,22 @@ const getUnit = (
     conversion: FormatBytesOptions['conversion'],
     style: FormatBytesOptions['style'],
     format: FormatBytesOptions['unitFormat'],
-): string[] => {
+) => {
     if (style === 'byte') {
         if (format === 'full') {
             // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-            return conversion === 'binary' ? computing.SizeByteBinaryFull : computing.SizeByteDecimalFull;
+            return conversion === 'binary' ? Unit.computing.SizeByteBinaryFull : Unit.computing.SizeByteDecimalFull;
         }
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return conversion === 'binary' ? computing.SizeByteBinaryMinimal : computing.SizeByteDecimalMinimal;
+        return conversion === 'binary' ? Unit.computing.SizeByteBinaryMinimal : Unit.computing.SizeByteDecimalMinimal;
     }
 
     if (format === 'full') {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return conversion === 'binary' ? computing.SizeOctetBinaryFull : computing.SizeOctetDecimalFull;
+        return conversion === 'binary' ? Unit.computing.SizeOctetBinaryFull : Unit.computing.SizeOctetDecimalFull;
     }
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return conversion === 'binary' ? computing.SizeOctetBinaryMinimal : computing.SizeOctetDecimalMinimal;
+    return conversion === 'binary' ? Unit.computing.SizeOctetBinaryMinimal : Unit.computing.SizeOctetDecimalMinimal;
 };
 
 /* eslint-disable tsdoc/syntax */
