@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { computing } from '@draconides/unit';
 
 type FormatBytesOptions = {
@@ -15,14 +17,18 @@ const getUnit = (
 ): string[] => {
     if (style === 'byte') {
         if (format === 'full') {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-return
             return conversion === 'binary' ? computing.SizeByteBinaryFull : computing.SizeByteDecimalFull;
         }
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return conversion === 'binary' ? computing.SizeByteBinaryMinimal : computing.SizeByteDecimalMinimal;
     }
 
     if (format === 'full') {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return conversion === 'binary' ? computing.SizeOctetBinaryFull : computing.SizeOctetDecimalFull;
     }
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return conversion === 'binary' ? computing.SizeOctetBinaryMinimal : computing.SizeOctetDecimalMinimal;
 };
 

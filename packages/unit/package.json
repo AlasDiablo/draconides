@@ -2,9 +2,9 @@
     "name": "@draconides/unit",
     "private": false,
     "version": "0.0.1-alpha.0",
-    "description": "Formatter function",
+    "description": "Unit dataset",
     "keywords": [
-        "Format",
+        "Unit",
         "Draconides"
     ],
     "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
@@ -27,7 +27,7 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/AlasDiablo/draconides.git",
-        "directory": "packages/format"
+        "directory": "packages/unit"
     },
     "bugs": {
         "url": "https://github.com/AlasDiablo/draconides/issues"

@@ -2,10 +2,16 @@
     "files": [],
     "references": [
         {
+            "path": "./packages/format"
+        },
+        {
             "path": "./packages/math"
         },
         {
             "path": "./packages/object"
+        },
+        {
+            "path": "./packages/unit"
         },
         {
             "path": "./packages/youtube-iframe"

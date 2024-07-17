@@ -33,7 +33,7 @@
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
     "dependencies": {
-        "@draconides/unit": "^0.0.1-alpha.0"
+        "@draconides/unit": "*"
     },
     "devDependencies": {
         "@types/jest": "^29.5.2",
