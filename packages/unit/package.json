@@ -22,7 +22,7 @@
         "test": "__test__"
     },
     "files": [
-        "./bin"
+        "*"
     ],
     "repository": {
         "type": "git",

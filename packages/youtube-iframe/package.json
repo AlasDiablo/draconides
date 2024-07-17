@@ -24,7 +24,7 @@
         "example": "example"
     },
     "files": [
-        "./bin"
+        "*"
     ],
     "repository": {
         "type": "git",
