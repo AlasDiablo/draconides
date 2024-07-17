@@ -5,7 +5,7 @@ type FormatBytesOptions = {
     formatter?: (value: number) => string;
     conversion?: 'binary' | 'decimal';
     style?: 'byte' | 'octet';
-    unitFormat: 'full' | 'minimal';
+    unitFormat?: 'full' | 'minimal';
 };
 
 const getUnit = (
@@ -36,23 +36,23 @@ const getUnit = (
 /**
  * Format a byte value into a readable string
  * @param bytes Byte to format
- * @param decimals Number of decimals
- * @param formatter Function to formate the number
- * @param conversion Type of conversion
- * @param style Type of the unit
- * @param unitFormat Unit format
+ * @param options Option object
+ * @param options.decimals Number of decimals
+ * @param options.formatter Function to formate the number
+ * @param options.conversion Type of conversion
+ * @param options.style Type of the unit
+ * @param options.unitFormat Unit format
  * @returns formated bytes
  */
-const formatBytes = (
-    bytes: number,
-    {
+const formatBytes = (bytes: number, options: FormatBytesOptions = {}) => {
+    const {
         decimals = 2,
         formatter = (value) => value.toString(),
         conversion = 'binary',
         style = 'byte',
         unitFormat = 'minimal',
-    }: FormatBytesOptions,
-) => {
+    } = options;
+
     // Get unit
     const unit = getUnit(conversion, style, unitFormat);
 
