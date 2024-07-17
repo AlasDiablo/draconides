@@ -1,4 +1,4 @@
-import Unit from '@draconides/unit';
+import { computing } from '@draconides/unit';
 
 type FormatBytesOptions = {
     decimals?: number;
@@ -15,19 +15,15 @@ const getUnit = (
 ) => {
     if (style === 'byte') {
         if (format === 'full') {
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-            return conversion === 'binary' ? Unit.computing.SizeByteBinaryFull : Unit.computing.SizeByteDecimalFull;
+            return conversion === 'binary' ? computing.SizeByteBinaryFull : computing.SizeByteDecimalFull;
         }
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return conversion === 'binary' ? Unit.computing.SizeByteBinaryMinimal : Unit.computing.SizeByteDecimalMinimal;
+        return conversion === 'binary' ? computing.SizeByteBinaryMinimal : computing.SizeByteDecimalMinimal;
     }
 
     if (format === 'full') {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return conversion === 'binary' ? Unit.computing.SizeOctetBinaryFull : Unit.computing.SizeOctetDecimalFull;
+        return conversion === 'binary' ? computing.SizeOctetBinaryFull : computing.SizeOctetDecimalFull;
     }
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return conversion === 'binary' ? Unit.computing.SizeOctetBinaryMinimal : Unit.computing.SizeOctetDecimalMinimal;
+    return conversion === 'binary' ? computing.SizeOctetBinaryMinimal : computing.SizeOctetDecimalMinimal;
 };
 
 /* eslint-disable tsdoc/syntax */
