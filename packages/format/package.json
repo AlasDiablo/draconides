@@ -1,7 +1,7 @@
 {
     "name": "@draconides/format",
     "private": false,
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Formatter function",
     "keywords": [
         "Format",
@@ -34,7 +34,7 @@
         "url": "https://github.com/AlasDiablo/draconides/issues"
     },
     "dependencies": {
-        "@draconides/unit": "^1.0.1"
+        "@draconides/unit": "^1.0.2"
     },
     "devDependencies": {
         "@types/jest": "^29.5.2",
