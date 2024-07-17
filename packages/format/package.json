@@ -1,0 +1,47 @@
+{
+    "name": "@draconides/format",
+    "private": false,
+    "version": "0.0.8",
+    "description": "Formatter function",
+    "keywords": [
+        "Format",
+        "Draconides"
+    ],
+    "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
+    "homepage": "https://github.com/AlasDiablo/draconides#readme",
+    "license": "CECILL-C",
+    "main": "./index.js",
+    "types": "./index.d.ts",
+    "scripts": {
+        "test": "jest",
+        "build": "tsc",
+        "prepublishOnly": "npm run build && cp -r ./lib/* . && rm -rf ./lib",
+        "postpublish": "git clean -fd && rm tsconfig.tsbuildinfo"
+    },
+    "directories": {
+        "test": "__test__"
+    },
+    "files": [
+        "*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlasDiablo/draconides.git",
+        "directory": "packages/format"
+    },
+    "bugs": {
+        "url": "https://github.com/AlasDiablo/draconides/issues"
+    },
+    "dependencies": {
+        "@draconides/unit": "*"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.2",
+        "jest": "^29.5.0",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
