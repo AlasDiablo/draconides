@@ -10,11 +10,12 @@
     "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
     "homepage": "https://github.com/AlasDiablo/draconides#readme",
     "license": "CECILL-C",
-    "main": "./lib/index.js",
-    "types": "./lib/index.d.ts",
+    "main": "./lib/cjs/index.js",
+    "module": "./lib/esm/index.js",
+    "types": "./lib/types/index.d.ts",
     "scripts": {
         "test": "jest",
-        "build": "tsc",
+        "build": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
         "prepublishOnly": "npm run build",
         "postpublish": "git clean -fd && rm tsconfig.tsbuildinfo"
     },
