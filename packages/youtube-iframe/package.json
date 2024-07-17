@@ -18,7 +18,7 @@
     "scripts": {
         "build": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
         "prepublishOnly": "npm run build",
-        "postpublish": "git clean -fd && rm tsconfig.tsbuildinfo"
+        "postpublish": "git clean -fd"
     },
     "directories": {
         "test": "__test__",
