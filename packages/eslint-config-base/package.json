@@ -1,46 +1,46 @@
 {
-    "name": "@draconides/eslint-config-base",
-    "private": false,
-    "version": "1.4.1",
-    "description": "Draconides Eslint Config",
-    "keywords": [
-        "ESLint Config",
-        "Draconides",
-        "ESLint ES6"
-    ],
-    "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
-    "homepage": "https://github.com/AlasDiablo/draconides#readme",
-    "license": "CECILL-C",
-    "main": "index.mjs",
-    "module": "index.mjs",
-    "files": [
-        "index.mjs"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AlasDiablo/draconides.git",
-        "directory": "packages/eslint-config-base"
-    },
-    "bugs": {
-        "url": "https://github.com/AlasDiablo/draconides/issues"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.11.1",
-        "eslint": "^9.11.1",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-import": "^2.31.0",
-        "eslint-plugin-prettier": "^5.2.1",
-        "prettier": "^3.3.3"
-    },
-    "peerDependencies": {
-        "@eslint/js": "^9.0.0",
-        "eslint": "^8.0.0 || ^9.0.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-import": "^2.31.0",
-        "eslint-plugin-prettier": "^5.0.0",
-        "prettier": "^3.0.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    }
+  "name": "@draconides/eslint-config-base",
+  "private": false,
+  "version": "2.0.0-alpha.0",
+  "description": "Draconides Eslint Config",
+  "keywords": [
+    "ESLint Config",
+    "Draconides",
+    "ESLint ES6"
+  ],
+  "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
+  "homepage": "https://github.com/AlasDiablo/draconides#readme",
+  "license": "CECILL-C",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "files": [
+    "index.mjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlasDiablo/draconides.git",
+    "directory": "packages/eslint-config-base"
+  },
+  "bugs": {
+    "url": "https://github.com/AlasDiablo/draconides/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.0.0 || ^9.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

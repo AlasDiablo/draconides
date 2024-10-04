@@ -1,46 +1,46 @@
 {
-    "name": "@draconides/eslint-config-react",
-    "private": false,
-    "version": "1.2.0",
-    "description": "Draconides Eslint Config for React",
-    "keywords": [
-        "ESLint Config",
-        "Draconides",
-        "ESLint ES6",
-        "React"
-    ],
-    "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
-    "homepage": "https://github.com/AlasDiablo/draconides#readme",
-    "license": "CECILL-C",
-    "main": "index.mjs",
-    "module": "index.mjs",
-    "files": [
-        "index.mjs"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AlasDiablo/draconides.git",
-        "directory": "packages/eslint-config-react"
-    },
-    "bugs": {
-        "url": "https://github.com/AlasDiablo/draconides/issues"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.0.0",
-        "@types/eslint-plugin-jsx-a11y": "^6.9.0",
-        "eslint": "^9.0.0",
-        "eslint-plugin-jsx-a11y": "^6.10.0",
-        "eslint-plugin-react": "^7.37.1",
-        "eslint-plugin-react-hooks": "^5.1.0-rc-459fd418-20241001"
-    },
-    "peerDependencies": {
-        "@eslint/js": "^9.0.0",
-        "eslint": "^8.0.0 || ^9.0.0",
-        "eslint-plugin-jsx-a11y": "^6.10.0",
-        "eslint-plugin-react": "^7.37.0",
-        "eslint-plugin-react-hooks": "^5.1.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    }
+  "name": "@draconides/eslint-config-react",
+  "private": false,
+  "version": "2.0.0-alpha.0",
+  "description": "Draconides Eslint Config for React",
+  "keywords": [
+    "ESLint Config",
+    "Draconides",
+    "ESLint ES6",
+    "React"
+  ],
+  "author": "AlasDiablo <25723276+AlasDiablo@users.noreply.github.com>",
+  "homepage": "https://github.com/AlasDiablo/draconides#readme",
+  "license": "CECILL-C",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "files": [
+    "index.mjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlasDiablo/draconides.git",
+    "directory": "packages/eslint-config-react"
+  },
+  "bugs": {
+    "url": "https://github.com/AlasDiablo/draconides/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc-459fd418-20241001"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.0.0 || ^9.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
