@@ -19,3 +19,11 @@ This module of Draconides is a configuration for ESLint for React
 ```bash
 npm install --save-dev @draconides/eslint-config-react
 ```
+
+### Require
+
+- `@eslint/js`: `^9.0.0`
+- `eslint`: `^8.0.0 || ^9.0.0`
+- `eslint-plugin-jsx-a11y`: `^6.10.0`
+- `eslint-plugin-react`: `^7.37.0`
+- `eslint-plugin-react-hooks`: `^5.1.0`

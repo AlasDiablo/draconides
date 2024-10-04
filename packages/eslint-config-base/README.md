@@ -19,3 +19,12 @@ This module of Draconides is a configuration for ESLint
 ```bash
 npm install --save-dev @draconides/eslint-config-base
 ```
+
+### Require
+
+- `@eslint/js`: `^9.0.0`
+- `eslint`: `^8.0.0 || ^9.0.0`
+- `eslint-config-prettier`: `^9.0.0`
+- `eslint-plugin-import`: `^2.31.0`
+- `eslint-plugin-prettier`: `^5.0.0`
+- `prettier`: `^3.0.0`
